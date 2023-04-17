@@ -39,4 +39,12 @@ public class Restaurant extends AbstractKitchen {
         return false;
     }
 
+    public String getHeaders() {
+        return "name,maxCapacity,rating";
+    }
+
+    public String toCSV() {
+        return String.format("%s,%s,%d", name, maxCapacity, rating);
+    }
+}
 }

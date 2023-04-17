@@ -8,7 +8,7 @@ import lombok.*;
 @Getter
 @ToString(of = {"yearOfFoundation", "maxCapacity", "name", "rating","openingTime", "closingTime", "currentCapacity"})
 
-public class Pub extends AbstractKitchen {
+public class Pub extends Restaurant {
     private int yearOfFoundation;
     private int maxCapacity;
     private String name;
@@ -27,4 +27,16 @@ public class Pub extends AbstractKitchen {
     public boolean kitchenType() {
         return false;
     }
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ",maxCapacity,rating";
+    }
+
+    @Override
+    public String toCSV() {
+        return String.format("%s,%s,%b", super.toCSV(), maxCapacity, rating);
+    }
 }
+
+
