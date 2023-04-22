@@ -1,7 +1,5 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-import ua.lviv.iot.algo.part1.lab1.Restaurant;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
@@ -9,12 +7,19 @@ import java.util.List;
 public class KitchenWriter extends Restaurant {
     private static final String FILENAME = "restaurants.csv";
 
+    public KitchenWriter() {
+
+    }
+
+    public static void writeModelsToFile() {
+    }
+
     public void writeToFile(List<Restaurant> restaurants) {
         try (FileWriter writer = new FileWriter(FILENAME)) {
-            // записуємо заголовки у файл
+
             writer.write(restaurants.get(0).getHeaders() + "\n");
 
-            // записуємо об'єкти у файл
+
             for (Restaurant restaurant : restaurants) {
                 writer.write(restaurant.toCSV() + "\n");
             }

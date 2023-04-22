@@ -47,4 +47,3 @@ public class Restaurant extends AbstractKitchen {
         return String.format("%s,%s,%d", name, maxCapacity, rating);
     }
 }
-}

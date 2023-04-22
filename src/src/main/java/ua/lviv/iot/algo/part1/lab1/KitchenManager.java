@@ -51,6 +51,8 @@ public class KitchenManager {
         pubList.add(pub1);
         pubList.add(pub2);
 
+        KitchenWriter kitchenWriter = new KitchenWriter();
+        kitchenWriter.writeToFile(restaurantList);
 
 
 
