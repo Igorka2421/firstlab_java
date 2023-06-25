@@ -30,7 +30,7 @@ public class KitchenManager {
     }
 
     public static void main(String... args) {
-        Restaurant restaurant1 = new Restaurant(2015, 200, "Cloud Monet", 5, 8, 22, 111);
+        Restaurant restaurant1 = new Restaurant(2016, 200, "Cloud Monet", 5, 8, 22, 111);
         Restaurant restaurant2 = new Restaurant(2007, 170, "Victor", 3, 8, 22, 95);
         HomeKitchen kitchen1 = new HomeKitchen("Electric", "built in");
         HomeKitchen kitchen2 = new HomeKitchen("Electric", "built in");
@@ -51,6 +51,8 @@ public class KitchenManager {
         pubList.add(pub1);
         pubList.add(pub2);
 
+        KitchenWriter kitchenWriter = new KitchenWriter();
+        kitchenWriter.writeToFile(restaurantList);
 
 
 
